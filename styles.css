@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-size: min(14px, 5vw);
+    color: rgba(240, 248, 255, .95);
+    text-shadow: 0 0 .05em;
+
+    *::selection {
+      background-color: rgba(240, 248, 255, .1);
+    }
+  }
+
+  a {
+    @apply text-green-400 transition-all duration-300;
+
+    &:hover {
+      @apply text-blue-400 cursor-pointer;
+    }
+  }
+
+  article {
+    @apply font-sans text-base;
+
+    h1, h2, h3, h4, h5, h6 { 
+      @apply font-bold;
+      margin: 1em 0 1em 0;
+    }
+
+    h1 { @apply text-4xl; }
+    h2 { @apply text-3xl; }
+    h3 { @apply text-2xl; }
+    h4 { @apply text-xl; }
+    h5 { @apply text-lg; }
+
+    i, em {
+      @apply italic;
+    }
+
+    em em {
+      @apply font-bold;
+    }
+
+    b, strong {
+      @apply font-bold;
+      b, strong {
+        @apply font-extrabold;
+      }
+    }
+
+    p {
+      @apply my-4;
+    }
+
+    u {
+      @apply underline;
+    }
+
+    del, s {
+      @apply line-through;
+    }
+
+    ul, ol {
+      @apply pl-8;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    ol, ul, img, table, pre, blockquotem {
+      @apply my-14 mx-auto block;
+    }
+
+    blockquote {
+      @apply rounded-md border-l-8 border-y-2 border-r-2 border-l-[currentColor] px-4 py-2;
+    }
+
+    pre {
+      @apply max-w-[min(1080px,100%-1rem)];
+    }
+
+    pre code {
+      @apply transition duration-300 rounded-3xl;
+
+      &:hover {
+        background-color: rgba(240, 248, 255, .1);
+      }
+    }
+
+    table {
+      @apply table border-collapse table-auto min-w-[min(20rem,100%-1rem)];
+    }
+
+    th, td {
+      @apply px-3 py-1 border-2;
+    }
+
+    th {
+      @apply font-bold text-center;
+    }
+
+    ol, ul {
+      @apply mx-0;
+      ol, ul {
+        @apply my-0;
+      }
+    }
+
+    img {
+      @apply max-w-full transition-all duration-300 rounded-3xl;
+
+      z-index: -1;
+
+      &:hover {
+        @apply rounded-none;
+      }
+    }
+  }
+}
+
+pre code.hljs {
+  @apply sm:p-[2em] p-[1em];
+  display: block;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*
+  xt256.css
+
+  Contact: initbar [at] protonmail [dot] ch
+         : github.com/initbar
+*/
+.hljs {
+/*color: #eaeaea;*/
+  color: currentColor;
+  text-shadow: none;
+/*background: #000; */
+  background: transparent;
+}
+.hljs-subst {
+  color: #ea0707
+}
+.hljs-emphasis {
+  font-style: italic
+}
+.hljs-strong {
+  font-weight: bold
+}
+.hljs-type {
+  @apply text-cyan-400 font-bold;
+}
+.hljs-params {
+
+}
+.hljs-literal,
+.hljs-number,
+.hljs-name {
+  color: #ff2222;
+  font-weight: bolder
+}
+.hljs-comment {
+  color: #969896
+}
+.hljs-selector-id,
+.hljs-quote {
+  color: #00ffff
+}
+.hljs-template-variable,
+.hljs-variable,
+.hljs-title {/*
+  color: #00ffff;
+  font-weight: bold
+*/}
+.hljs-selector-class,
+.hljs-keyword,
+.hljs-symbol {
+  color: #fff000
+}
+.hljs-string,
+.hljs-bullet {
+  color: #22ff22
+}
+.hljs-tag,
+.hljs-section {
+  color: #222fff
+}
+.hljs-selector-tag {
+  color: #222fff;
+  font-weight: bold
+}
+.hljs-attribute,
+/*.hljs-built_in,*/
+.hljs-regexp,
+.hljs-link {
+  color: #ff5566
+}
+.hljs-meta {
+  color: #fff000;
+  font-weight: bolder
+}

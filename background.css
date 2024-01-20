@@ -1,0 +1,13 @@
+
+#background {
+  position: fixed;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  top: -6px; left: -6px;
+  z-index: -100;
+  background-image: url(/static/background.jpg);
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) brightness(0.22);
+}
