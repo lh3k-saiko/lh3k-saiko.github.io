@@ -22,7 +22,7 @@
   }
 
   article {
-    @apply font-sans text-base;
+    @apply font-sans text-base mb-20;
 
     h1, h2, h3, h4, h5, h6 { 
       @apply font-bold;
@@ -36,7 +36,7 @@
     h5 { @apply text-lg; }
 
     i, em {
-      @apply italic;
+      @apply italic relative right-[.08rem];
     }
 
     em em {
@@ -76,6 +76,10 @@
 
     ol, ul, img, table, pre, blockquotem {
       @apply my-14 mx-auto block;
+    }
+
+    ol, ul {
+      @apply my-8;
     }
 
     blockquote {
@@ -165,7 +169,7 @@ code.hljs {
 .hljs-literal,
 .hljs-number,
 .hljs-name {
-  color: #ff2222;
+  color: #ffff22;
   font-weight: bolder
 }
 .hljs-comment {
