@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    font-size: min(14px, 5vw);
+    font-size: min(15px, 5vw);
     color: rgba(240, 248, 255, .95);
     text-shadow: 0 0 .05em;
 
@@ -74,8 +74,8 @@
       @apply list-decimal;
     }
 
-    ol, ul, img, table, pre, blockquotem {
-      @apply my-14 mx-auto block;
+    ol, ul, img, table, pre, blockquote {
+      @apply my-10 mx-auto block;
     }
 
     ol, ul {
@@ -130,13 +130,12 @@
 }
 
 pre code.hljs {
-  @apply sm:p-[2em] p-[1em];
-  display: block;
-  overflow-x: auto;
+  @apply sm:p-[2em] p-[1em] block overflow-x-hidden whitespace-pre-wrap;
   box-sizing: border-box;
 }
+
 code.hljs {
-  padding: 3px 5px
+  
 }
 /*
   xt256.css
