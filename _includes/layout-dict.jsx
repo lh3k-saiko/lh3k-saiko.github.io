@@ -34,9 +34,9 @@ export default ({ children, url, nav, is_menu_root, ...data }, helpers ) => {
     return 0;
   }
 
-  const parent = nav.breadcrumb();
+  const parent = nav.breadcrumb(url).reverse();
 
-  const parent_url = parent[0].data.url === "/" ? "/archive" : parent[0].data.url;
+  const parent_url = (parent.length > 0 && parent[1].data.url === "/") ? "/archive" : parent[1].data.url;
 
   children = (
     <div class="w-full max-w-[min(80rem,100vw-1rem)] mx-auto">
