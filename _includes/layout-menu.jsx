@@ -8,7 +8,7 @@ export default ({ url, results, pagination : { page, totalPages, previous, next 
       <h1>Menu</h1>
       <Page0 />
       <ul class="mt-10">
-        { results.map(mapf) }
+        { results.filter(({ used_in_menu }) => (used_in_menu)).map(mapf) }
       </ul>    
       { previous || next ? <div class="flex text-xl font-bold">
         { previous ? <a href={previous} class="flex-1 text-left">&lt; Previous</a> : <span class="flex-1"> </span> }
