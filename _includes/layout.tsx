@@ -5,6 +5,7 @@ export default ({ title, children, ...data }: Lume.Data, helpers: Lume.Helpers )
     <head>
       <title>{ title }</title>
       <meta charset="utf-8" />
+      <link rel="icon" href="/static/avatar.jpg" />
       <link href="/styles.css" rel="stylesheet" />
       <link href="/static/katex/katex.min.css" rel="stylesheet" />
       <link href="/background.css" rel="stylesheet" />

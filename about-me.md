@@ -14,7 +14,7 @@ It's preferred to pronounce it as "el ayche trikilo" rather than "el ayche three
 ## What do you do?
 
 - CS undergraduate of UESTC
-- Nominal student coach of UESTC_XCPC (The CP Training Team of my school) during 2024-2025.
+- Nominal student coach of UESTC_XCPC (the CP training team of my school) during 2024-2025.
 - Front-end developer out of interest
 - ... 
 
