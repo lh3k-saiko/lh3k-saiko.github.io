@@ -1,0 +1,19 @@
+<a href="{{ url }}" class="block w-full lg:h-60 md:h-40 h-35 rounded-[1.5rem] overflow-hidden flex text-white
+  hover:text-white hover:shadow-lg transition-400">
+  <img src="{{ arisa.bannerImage ?? "/static/avatar.jpg" }}" class="h-full"/>
+  <div class="h-full flex-1 min-w-0 py-2 lg:py-3 px-4" 
+    style="background-image: var(--theme-background-gradient);">
+    <div class="h-full w-full flex flex-col justify-center space-y-1 sm:space-y-2 lg:space-y-3 overflow-hidden break-all">
+      <div class="whitespace-nowrap text-ellipsis w-full font-bold lg:text-3xl md:text-2xl text-lg">{{ title }}</div>
+      <div class="whitespace-nowrap text-ellipsis w-full font-italic">{{ description ?? arisa.defaultDescription }}</div>
+      <div class="w-full max-h-[5rem] text-slate-100 overflow-hidden md:text-[1em] text-sm">
+        <p class="my-none">
+          <span class="hidden lg:inline">{{ preview }}</span>
+          <span class="hidden lg:hidden md:inline">{{ preview.length <= 60? preview : preview.substring(0, 60 - 3) + "..." }}</span>
+          <span class="md:hidden sm:inline hidden">{{ preview.length <= 45? preview : preview.substring(0, 45 - 3) + "..." }}</span>
+          <span class="sm:hidden inline">{{ preview.length <= 35? preview : preview.substring(0, 35 - 3) + "..." }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</a>

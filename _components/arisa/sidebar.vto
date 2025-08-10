@@ -1,0 +1,19 @@
+<script src="/js/arisa/sidebar/app.js" defer></script>
+
+<arisa-sidebar>
+  <div class="w-full py-10 flex flex-col items-center justify-center select-none">
+    <div class="w-24 rounded-full border-4 border-[currentColor] border-solid">
+      <img src="/static/avatar.jpg" class="rounded-full"/>
+    </div>
+    <div class="font-bold text-xl mt-4">{{ author }}</div>
+    {{ if motto }}
+      <div class="mt-1">{{ motto }}</div>
+    {{ /if }}
+
+    <div class="h-8"></div>
+    <div class="text-inherit font-bold text-lg tracking-wide"><a class="text-inherit block text-inherit hover:text-inherit w-full py-2 text-center" href="/">Home</a></div>
+    <div class="text-inherit font-bold text-lg tracking-wide"><a class="text-inherit block text-inherit hover:text-inherit w-full py-2 text-center" href="/about-me">About Me</a></div>
+    <div class="text-inherit font-bold text-lg tracking-wide"><a class="text-inherit block text-inherit hover:text-inherit w-full py-2 text-center" href="/menu">Menu</a></div>
+    <div class="text-inherit font-bold text-lg tracking-wide"><a class="text-inherit block text-inherit hover:text-inherit w-full py-2 text-center" href="/archive">Archive</a></div>
+  </div>
+</arisa-sidebar>

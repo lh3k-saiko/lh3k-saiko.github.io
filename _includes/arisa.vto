@@ -1,0 +1,21 @@
+{{ set extraHead }}
+  <link href="/style/arisa.uno.css" rel="stylesheet" type="text/css"/>
+{{ /set }}
+
+
+{{ layout "barebone.vto" { extraHead } }}
+  <div class="flex flex-row w-full">
+    <div class="sticky top-0 h-[100vh]">
+      {{ await comp.arisa.sidebar({}) }}
+    </div>
+    <div class="flex-1 min-h-[100vh] flex flex-col">
+      {{ await comp.arisa.header({}) }}
+      <main class="h-full">
+        {{ content }}
+      </main>
+      {{ if arisa.includeFooter }}
+        {{ await comp.arisa.footer({}) }}
+      {{ /if}}
+    <div>
+  </div>
+{{ /layout }}

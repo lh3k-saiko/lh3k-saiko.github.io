@@ -1,0 +1,50 @@
+{
+  "imports": {
+    "@types/mdast": "npm:@types/mdast@^4.0.4",
+    "@types/unist": "npm:@types/unist@^3.0.3",
+    "cspell-gitignore": "npm:cspell-gitignore@^9.2.0",
+    "github-slugger": "npm:github-slugger@^2.0.0",
+    "hastscript": "npm:hastscript@^9.0.1",
+    "he": "npm:he@^1.2.0",
+    "isbinaryfile": "npm:isbinaryfile@^5.0.4",
+    "lit": "npm:lit@^3.3.1",
+    "lume/": "https://deno.land/x/lume@v3.0.5/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.11/jsx-runtime.ts",
+    "mdast": "npm:mdast@^3.0.0",
+    "mdast-util-to-string": "npm:mdast-util-to-string@^4.0.0",
+    "rehype-mathjax": "npm:rehype-mathjax@^7.1.0",
+    "rehype-prism-plus": "npm:rehype-prism-plus@^2.0.1",
+    "rehype-stringify": "npm:rehype-stringify@^10.0.1",
+    "remark": "npm:remark@^15.0.1",
+    "remark-emoji": "npm:remark-emoji@^5.0.1",
+    "remark-gfm": "npm:remark-gfm@^4.0.1",
+    "remark-math": "npm:remark-math@^6.0.0",
+    "remark-parse": "npm:remark-parse@^11.0.0",
+    "remark-rehype": "npm:remark-rehype@^11.1.2",
+    "unified": "npm:unified@^11.0.5",
+    "unist": "npm:unist@^0.0.1",
+    "unist-util-visit": "npm:unist-util-visit@^5.0.0",
+    "vfile": "npm:vfile@^6.0.3"
+  },
+  "tasks": {
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "build": "deno task lume",
+    "serve": "deno task lume -s"
+  },
+  "compilerOptions": {
+    "types": [
+      "lume/types.ts"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "lume"
+  },
+  "unstable": [
+    "temporal",
+    "fmt-component"
+  ],
+  "lint": {
+    "plugins": [
+      "https://deno.land/x/lume@v3.0.5/lint.ts"
+    ]
+  }
+}

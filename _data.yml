@@ -1,0 +1,9 @@
+layout: arisa.vto
+author: lh3k
+motto: 自行车站着骑 (/≧▽≦)/
+
+arisa:
+  usedInMenu: true
+  includeFooter: true
+  __placeHolder: true
+  defaultDescription: 这个人很懒，什么都没写

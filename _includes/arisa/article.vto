@@ -1,0 +1,37 @@
+{{ layout "../arisa.vto" }}
+  <div class="md:flex md:flex-row">
+    <div class="
+      md:sticky md:top-10 md:h-full md:w-[20rem] md:flex md:flex-col md:items-start md:px-8 md:my-0
+      px-4 mt-10
+    ">
+      <div>
+        <div class="font-bold text-2xl my-3 w-full">
+          <span>On this page</span>
+        </div>
+        {{ await comp.arisa.toc({ toc }) }}
+      </div>
+    </div>
+    <div class="flex-1 px-5 overflow-x-hidden lg:py-[4rem] md:py-[3rem] py-5">
+      <div class="max-w-[850px] mx-auto">
+        <article class="arisa-article animation-flow-up">
+          {{ content }}
+        </article>
+        <div class="text-right text-sm md:mt-[3rem] mt-4">
+          {{ if publishDate }}
+            <p>Publish date: {{ publishDate |> formatDate }}</p>
+          {{ else if stats.mtime }}
+            <p>Last modified: <code>{{ stats.mtime |> formatDate }}</code></p>
+          {{ /if }}
+          <div>
+            <a href="/viewsource{{ page.sourcePath }}.html" style="color: var(--color-pink-400); text-decoration: none;">View Source
+              <!-- https://heroicons.com/ code-bracket -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 inline-block">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ /layout }}

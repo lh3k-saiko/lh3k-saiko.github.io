@@ -1,0 +1,27 @@
+{{ layout "../arisa.vto" }}
+<div class="px-4 py-4 max-w-[70rem] mx-auto">
+  <h1 class="font-serif md:my-10 my-4 text-4xl">Menu</h1>
+    <div class="lg:space-y-8 space-y-5 md:space-y-8 lg:space-y-12">
+    {{ for page of results }}
+      {{ if page.arisa.usedInMenu }}
+        {{ await comp.arisa["prev-card"](page) }}
+      {{ /if }}
+    {{ /for }}
+    </div>
+  {{ if pagination.previous || pagination.next }}
+    <div class="flex text-xl font-bold mt-3 md:mt-10">
+      {{ if pagination.previous }}
+        <a href="{{pagination.previous}}" class="flex-1 text-left">&lt; Previous</a>
+      {{ else }}
+        <span class="flex-1"></span>
+      {{ /if }}
+      <span class="flex-1 text-center">{{pagination.page}}/{{pagination.totalPages}}</span>
+      {{ if pagination.next }}
+        <a href="{{pagination.next}}" class="flex-1 text-right">Next &gt;</a>
+      {{ else }}
+        <span class="flex-1"></span>
+      {{ /if }}
+    </div>
+  {{ /if }}
+</div>
+{{ /layout }}

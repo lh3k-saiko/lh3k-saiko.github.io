@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+    @apply overflow-x-hidden overflow-y-auto w-full lg:[font-size:16px];
+    font-size: min(5vw, 15px);
+    --theme-background-gradient: linear-gradient(150deg, hsl(331 95% 74% / 1), hsl(323 95% 74% / 1));
+    
+}
+
+@layer base {
+    a {
+        @apply text-pink-400 no-underline;
+        &:hover {
+            @apply text-pink-600;
+        }
+    }
+}
+
+.arisa-article {
+    @apply text-base/8 prose prose-slate max-w-[9999px];
+    blockquote {
+        @apply my-8 py-1 px-4 border-solid border-l-[8px] border-1 border-sky-400 rounded-[8px];
+    }
+    pre {
+        @apply font-mono;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-serif font-[400];
+    }
+    svg {
+        display: inline-block;
+    }
+}
+
+.arisa-toc {
+    summary {
+        @apply select-none;
+    }
+    details > summary::marker {
+        content: "+";
+        @apply font-bold font-mono inline-block mr-1 transition-all cursor-pointer text-sky-400 select-none;
+    }
+
+    details[open] > summary::marker {
+        content: "-";
+    }
+
+    ul,
+    details {
+        @apply my-3 pl-2;
+    }
+
+    details > .arisa-toc-children {
+        @apply border-solid border-l-sky-400 border-l-2 border-r-0 border-y-0;
+    }
+
+    ul {
+        @apply list-image-none;  
+    }
+    li {
+        @apply my-3;
+        &::marker {
+            content: ""
+        }
+    }
+    .arisa-toc-leaf {
+        @apply pl-2;
+    }
+}
+
+@keyframes flow-up {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+.animation-flow-up {
+    animation: 1s ease-out flow-up;
+}
