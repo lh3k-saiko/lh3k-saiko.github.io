@@ -1,6 +1,5 @@
 ---
 layout: arisa/article.vto
-url: /about-me
 title: About Me
 ---
 
